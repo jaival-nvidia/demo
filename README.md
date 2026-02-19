@@ -37,15 +37,15 @@ Each step is a standalone script. Run them individually, chain them in Claude Co
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/youruser/methodology-synthesis.git
-cd methodology-synthesis
+git clone https://github.com/jaival-nvidia/demo.git
+cd demo
 pip install -r requirements.txt
 
 # 2. Make sure Ollama is running with a model
 ollama pull glm-4.7-flash:bf16
 
-# 3. Drop PDFs into papers/
-cp ~/Downloads/my_paper.pdf papers/
+# 3. Download sample papers (or drop your own PDFs into papers/)
+bash papers/download_samples.sh
 
 # 4. Run
 python synthesize.py papers/
